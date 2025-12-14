@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: code-reviewer-backend
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: GOOGLE_GEMINI_KEY
+        scope: build
+      - key: NODE_ENV
+        value: production
